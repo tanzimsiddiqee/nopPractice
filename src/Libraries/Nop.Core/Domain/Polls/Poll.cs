@@ -57,5 +57,9 @@ namespace Nop.Core.Domain.Polls
         /// Gets or sets the poll end date and time
         /// </summary>
         public DateTime? EndDateUtc { get; set; }
+
+
+        //test Property
+        public string TestProperty { get; set; }
     }
 }
