@@ -1,0 +1,69 @@
+@model AzureBlobConfigModel
+
+<div class="card-body">
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="ConnectionString" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="ConnectionString" />
+            <span asp-validation-for="ConnectionString"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="ContainerName" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="ContainerName" />
+            <span asp-validation-for="ContainerName"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="EndPoint" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="EndPoint" />
+            <span asp-validation-for="EndPoint"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="AppendContainerName" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="AppendContainerName" />
+            <span asp-validation-for="AppendContainerName"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="StoreDataProtectionKeys" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="StoreDataProtectionKeys" />
+            <span asp-validation-for="StoreDataProtectionKeys"></span>
+        </div>
+    </div>
+    <nop-nested-setting asp-for="StoreDataProtectionKeys">
+        <div class="form-group row" id="azure-data-protection-container">
+            <div class="col-md-3">
+                <nop-label asp-for="DataProtectionKeysContainerName" />
+            </div>
+            <div class="col-md-9">
+                <nop-editor asp-for="DataProtectionKeysContainerName" />
+                <span asp-validation-for="DataProtectionKeysContainerName"></span>
+            </div>
+        </div>
+        <div class="form-group row" id="azure-data-protection-vault">
+            <div class="col-md-3">
+                <nop-label asp-for="DataProtectionKeysVaultId" />
+            </div>
+            <div class="col-md-9">
+                <nop-editor asp-for="DataProtectionKeysVaultId" />
+                <span asp-validation-for="DataProtectionKeysVaultId"></span>
+            </div>
+        </div>
+    </nop-nested-setting>
+</div>
