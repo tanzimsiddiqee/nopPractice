@@ -1,0 +1,11 @@
+{
+  "Group": "Widgets",
+  "FriendlyName": "Owl Carousel 2",
+  "SystemName": "Nop.Plugin.Widgets.OwlCarousel2",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "Tanzim Siddiqee",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.OwlCarousel2.dll",
+  "Description": "This plugin allows you to change the contents of main page slider"
+}
