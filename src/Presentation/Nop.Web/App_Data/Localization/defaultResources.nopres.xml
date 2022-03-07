@@ -19620,4 +19620,10 @@
   <LocaleResource Name="Wishlist.YourWishlistURL">
     <Value>Your wishlist URL for sharing</Value>
   </LocaleResource>
+	<LocaleResource Name="Admin.ContentManagement.Polls.Fields.TestProperty">
+		<Value>Test Property</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.ContentManagement.Polls.Fields.TestProperty.Hint">
+		<Value>Set the poll end date in Coordinated Universal Time (UTC). You can also leave it empty.</Value>
+	</LocaleResource>
 </Language>

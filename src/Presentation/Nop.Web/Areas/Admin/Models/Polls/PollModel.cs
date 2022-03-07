@@ -60,6 +60,9 @@ namespace Nop.Web.Areas.Admin.Models.Polls
         [UIHint("DateTimeNullable")]
         public DateTime? EndDateUtc { get; set; }
 
+        [NopResourceDisplayName("Admin.ContentManagement.Polls.Fields.TestProperty")]
+        public string TestProperty { get; set; }
+
         [NopResourceDisplayName("Admin.ContentManagement.Polls.Fields.LimitedToStores")]
         public IList<int> SelectedStoreIds { get; set; }
 

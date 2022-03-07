@@ -13,6 +13,8 @@ namespace Nop.Web.Areas.Admin.Validators.Polls
         {
             RuleFor(x => x.Name).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Admin.ContentManagement.Polls.Fields.Name.Required"));
 
+            RuleFor(x => x.TestProperty).MinimumLength(2).MaximumLength(5);
+
             SetDatabaseValidationRules<Poll>(mappingEntityAccessor);
         }
     }
