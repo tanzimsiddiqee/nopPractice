@@ -90,6 +90,10 @@
     {
       "SystemName": "ExternalAuth.Facebook",
       "Version": "1.73"
+    },
+    {
+      "SystemName": "Widgets.OwlCarousel2",
+      "Version": "1.00"
     }
   ],
   "PluginNamesToUninstall": [],

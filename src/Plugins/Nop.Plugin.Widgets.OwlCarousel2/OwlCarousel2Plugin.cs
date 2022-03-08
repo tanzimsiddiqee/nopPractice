@@ -48,9 +48,9 @@ namespace Nop.Plugin.Widgets.OwlCarousel2
         /// Install plugin
         /// </summary>
         /// <returns>A task that represents the asynchronous operation</returns>
-        public override Task InstallAsync()
+        public override async Task InstallAsync()
         {
-            return Task.CompletedTask;
+            await base.InstallAsync();
         }
 
         /// <summary>
@@ -59,11 +59,11 @@ namespace Nop.Plugin.Widgets.OwlCarousel2
         /// <returns>A task that represents the asynchronous operation</returns>
         public override async Task UninstallAsync()
         {
-            //settings
-            //await _settingService.DeleteSettingAsync<NivoSliderSettings>();
+            ////settings
+            //await _settingService.DeleteSettingAsync<OwlCarousel2Setting>();
 
-            //locales
-            await _localizationService.DeleteLocaleResourcesAsync("Plugins.Widgets.OwlCarousel2");
+            ////locales
+            //await _localizationService.DeleteLocaleResourcesAsync("Plugins.Widgets.OwlCarousel2");
 
             await base.UninstallAsync();
         }
