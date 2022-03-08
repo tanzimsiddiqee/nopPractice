@@ -11,11 +11,6 @@
 	<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
-	<ItemGroup>
-		<None Remove="Content/owl-carousel/slides/slide1.jpg" />
-		<None Remove="Content/owl-carousel/slides/mslide1.jpg" />
-	</ItemGroup>
-	
   <ItemGroup>
     <ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
 	<ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
