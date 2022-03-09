@@ -1,4 +1,6 @@
-﻿<link rel="stylesheet" href="~/Plugins/Widgets.OwlCarousel2/Content/owlcarousel2/assets/owl.carousel.css">
+﻿@model Nop.Plugin.Widgets.OwlCarousel2.Models.PublicInfoViewModel
+
+<link rel="stylesheet" href="~/Plugins/Widgets.OwlCarousel2/Content/owlcarousel2/assets/owl.carousel.css">
     
 <script asp-exclude-from-bundle="true" src="~/Plugins/Widgets.OwlCarousel2/Content/owlcarousel2/owl.carousel.js" asp-location="Footer"></script>
 
@@ -10,48 +12,104 @@
                     <div class="owl-carousel">
                         <div class="block-slideshow__slide">
                             <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-1-full.jpg')"></div>
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-1-mobile.jpg')"></div>
+                                style="background-image: url('@Url.Content(Model.SlideLg1Url)')"></div>
+                                @if (Model.SlideSm1Url != null)
+                                {
+                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideSm1Url)')"></div>
+                            }
+                            else
+                            {
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideLg1Url)')"></div>
+                            }
+
                             <div class="block-slideshow__slide-content">
-                                <div class="block-slideshow__slide-title">Big choice of<br>Plumbing products
-                                </div>
-                                <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
-                                    molestie.</div>
-                                <a href="" class="block-slideshow__slide-button"><span
-                                        class="btn btn-primary btn-lg">Shop Now</span></a>
+                                @if (Model.Title1 != null)
+                                {
+                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title1)</div>
+                                }
+                                
+                                @if (Model.Description1 != null)
+                                {
+                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description1)</div>
+                                }
+                                
+                                @if (Model.Link1 != null)
+                                {
+                                    <a href="@Html.DisplayFor(model => model.Link1)" class="block-slideshow__slide-button"><span
+                                    class="btn btn-primary btn-lg">Shop Now</span></a>
+                                }
+                                
                             </div>
                         </div>
                         <div class="block-slideshow__slide">
                             <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-2-full.jpg')"></div>
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-2-mobile.jpg')"></div>
+                                style="background-image: url('@Url.Content(Model.SlideLg2Url)')"></div>
+                                @if (Model.SlideSm2Url != null)
+                                {
+                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideSm2Url)')"></div>
+                            }
+                            else
+                            {
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideLg2Url)')"></div>
+                            }
+
                             <div class="block-slideshow__slide-content">
-                                <div class="block-slideshow__slide-title">Screwdrivers<br>Professional Tools
-                                </div>
-                                <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
-                                    molestie.</div>
-                                <a href="" class="block-slideshow__slide-button"><span
-                                        class="btn btn-primary btn-lg">Shop Now</span></a>
+                                @if (Model.Title2 != null)
+                                {
+                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title2)</div>
+                                }
+                                
+                                @if (Model.Description2 != null)
+                                {
+                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description2)</div>
+                                }
+                                
+                                @if (Model.Link2 != null)
+                                {
+                                    <a href="@Html.DisplayFor(model => model.Link2)" class="block-slideshow__slide-button"><span
+                                    class="btn btn-primary btn-lg">Shop Now</span></a>
+                                }
+                                
                             </div>
                         </div>
-                        <div class="block-slideshow__slide">
+                            <div class="block-slideshow__slide">
                             <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-3-full.jpg')"></div>
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
-                                style="background-image: url('/Plugins/Widgets.OwlCarousel2/Content/sample-images/slide-3-mobile.jpg')"></div>
+                                style="background-image: url('@Url.Content(Model.SlideLg3Url)')"></div>
+                                @if (Model.SlideSm3Url != null)
+                                {
+                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideSm3Url)')"></div>
+                            }
+                            else
+                            {
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                style="background-image: url('@Url.Content(Model.SlideLg3Url)')"></div>
+                            }
+
                             <div class="block-slideshow__slide-content">
-                                <div class="block-slideshow__slide-title">One more<br>Unique header</div>
-                                <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
-                                    molestie.</div>
-                                <a href="" class="block-slideshow__slide-button"><span
-                                        class="btn btn-primary btn-lg">Shop Now</span></a>
+                                @if (Model.Title3 != null)
+                                {
+                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title3)</div>
+                                }
+                                
+                                @if (Model.Description3 != null)
+                                {
+                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description3)</div>
+                                }
+                                
+                                @if (Model.Link3 != null)
+                                {
+                                    <a href="@Html.DisplayFor(model => model.Link3)" class="block-slideshow__slide-button"><span
+                                    class="btn btn-primary btn-lg">Shop Now</span></a>
+                                }
+                                
                             </div>
-                        </div></div>
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>
