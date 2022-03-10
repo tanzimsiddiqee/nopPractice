@@ -14,10 +14,17 @@ namespace Nop.Plugin.Widgets.OwlCarousel2.Validators
     {
         public ConfigurationValidator(ILocalizationService localizationService)
         {
-            RuleFor(x => x.SlideLg1Id).NotNull();
-            RuleFor(x => x.Title1).MaximumLength(20);
-            RuleFor(x => x.Description1).MaximumLength(60);
-            RuleFor(x => x.Link1).Matches(@"^[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$");
+            RuleFor(x => x.Title1).MaximumLength(40);
+            RuleFor(x => x.Description1).MaximumLength(130);
+            RuleFor(x => x.Link1).Matches(@"^http(s)?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$");
+
+            RuleFor(x => x.Title2).MaximumLength(40);
+            RuleFor(x => x.Description2).MaximumLength(130);
+            RuleFor(x => x.Link2).Matches(@"^http(s)?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$");
+
+            RuleFor(x => x.Title3).MaximumLength(40);
+            RuleFor(x => x.Description3).MaximumLength(130);
+            RuleFor(x => x.Link3).Matches(@"^http(s)?://([\w-]+.)+[\w-]+(/[\w- ./?%&=])?$");
         }
     }
 }

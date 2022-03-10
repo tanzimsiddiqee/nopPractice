@@ -132,13 +132,16 @@ namespace Nop.Plugin.Widgets.OwlCarousel2.Controllers
              * and loaded from database after each update */
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideLg1Id, model.SlideLg1Id_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideSm1Id, model.SlideSm1Id_OverrideForStore, storeScope, false);
+            await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Title1, model.Title1_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Description1, model.Description1_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Link1, model.Link1_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideLg2Id, model.SlideLg2Id_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideSm2Id, model.SlideSm2Id_OverrideForStore, storeScope, false);
+            await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Title2, model.Title2_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Description2, model.Description2_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Link2, model.Link2_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideLg3Id, model.SlideLg3Id_OverrideForStore, storeScope, false);
+            await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Title3, model.Title3_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.SlideSm3Id, model.SlideSm3Id_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Description3, model.Description3_OverrideForStore, storeScope, false);
             await _settingService.SaveSettingOverridablePerStoreAsync(owlCarousel2Settings, x => x.Link3, model.Link3_OverrideForStore, storeScope, false);

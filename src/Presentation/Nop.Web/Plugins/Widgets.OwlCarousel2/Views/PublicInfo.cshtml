@@ -10,106 +10,115 @@
             <div class="col-12">
                 <div class="block-slideshow__body">
                     <div class="owl-carousel">
-                        <div class="block-slideshow__slide">
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                        @if (Model.SlideLg1Url != null)
+                        {
+                            <div class="block-slideshow__slide">
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
                                 style="background-image: url('@Url.Content(Model.SlideLg1Url)')"></div>
                                 @if (Model.SlideSm1Url != null)
                                 {
-                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideSm1Url)')"></div>
-                            }
-                            else
-                            {
-                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                }
+                                else
+                                {
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideLg1Url)')"></div>
-                            }
+                                }
 
-                            <div class="block-slideshow__slide-content">
-                                @if (Model.Title1 != null)
-                                {
-                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title1)</div>
-                                }
-                                
-                                @if (Model.Description1 != null)
-                                {
-                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description1)</div>
-                                }
-                                
-                                @if (Model.Link1 != null)
-                                {
-                                    <a href="@Html.DisplayFor(model => model.Link1)" class="block-slideshow__slide-button"><span
+                                <div class="block-slideshow__slide-content">
+                                    @if (Model.Title1 != null)
+                                    {
+                                        <div class="block-slideshow__slide-title">@Html.Raw(Model.Title1)</div>
+                                    }
+
+                                    @if (Model.Description1 != null)
+                                    {
+                                        <div class="block-slideshow__slide-text">@Html.Raw(Model.Description1)</div>
+                                    }
+
+                                    @if (Model.Link1 != null)
+                                    {
+                                        <a href="@Html.DisplayFor(model => model.Link1)" class="block-slideshow__slide-button"><span
                                     class="btn btn-primary btn-lg">Shop Now</span></a>
-                                }
-                                
+                                    }
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="block-slideshow__slide">
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                        }
+                        @if (Model.SlideLg2Url != null)
+                        {
+                            <div class="block-slideshow__slide">
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
                                 style="background-image: url('@Url.Content(Model.SlideLg2Url)')"></div>
                                 @if (Model.SlideSm2Url != null)
                                 {
-                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideSm2Url)')"></div>
-                            }
-                            else
-                            {
-                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                }
+                                else
+                                {
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideLg2Url)')"></div>
-                            }
+                                }
 
-                            <div class="block-slideshow__slide-content">
-                                @if (Model.Title2 != null)
-                                {
-                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title2)</div>
-                                }
-                                
-                                @if (Model.Description2 != null)
-                                {
-                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description2)</div>
-                                }
-                                
-                                @if (Model.Link2 != null)
-                                {
-                                    <a href="@Html.DisplayFor(model => model.Link2)" class="block-slideshow__slide-button"><span
+                                <div class="block-slideshow__slide-content">
+                                    @if (Model.Title2 != null)
+                                    {
+                                        <div class="block-slideshow__slide-title">@Html.Raw(Model.Title2)</div>
+                                    }
+
+                                    @if (Model.Description2 != null)
+                                    {
+                                        <div class="block-slideshow__slide-text">@Html.Raw(Model.Description2)</div>
+                                    }
+
+                                    @if (Model.Link2 != null)
+                                    {
+                                        <a href="@Html.DisplayFor(model => model.Link2)" class="block-slideshow__slide-button"><span
                                     class="btn btn-primary btn-lg">Shop Now</span></a>
-                                }
-                                
+                                    }
+
+                                </div>
                             </div>
-                        </div>
+                        }
+                        @if (Model.SlideLg3Url != null)
+                        {
                             <div class="block-slideshow__slide">
-                            <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
                                 style="background-image: url('@Url.Content(Model.SlideLg3Url)')"></div>
                                 @if (Model.SlideSm3Url != null)
                                 {
-                                     <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideSm3Url)')"></div>
-                            }
-                            else
-                            {
-                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                }
+                                else
+                                {
+                                    <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
                                 style="background-image: url('@Url.Content(Model.SlideLg3Url)')"></div>
-                            }
+                                }
 
-                            <div class="block-slideshow__slide-content">
-                                @if (Model.Title3 != null)
-                                {
-                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title3)</div>
-                                }
-                                
-                                @if (Model.Description3 != null)
-                                {
-                                      <div class="block-slideshow__slide-text">@Html.Raw(Model.Description3)</div>
-                                }
-                                
-                                @if (Model.Link3 != null)
-                                {
-                                    <a href="@Html.DisplayFor(model => model.Link3)" class="block-slideshow__slide-button"><span
+                                <div class="block-slideshow__slide-content">
+                                    @if (Model.Title3 != null)
+                                    {
+                                        <div class="block-slideshow__slide-title">@Html.Raw(Model.Title3)</div>
+                                    }
+
+                                    @if (Model.Description3 != null)
+                                    {
+                                        <div class="block-slideshow__slide-text">@Html.Raw(Model.Description3)</div>
+                                    }
+
+                                    @if (Model.Link3 != null)
+                                    {
+                                        <a href="@Html.DisplayFor(model => model.Link3)" class="block-slideshow__slide-button"><span
                                     class="btn btn-primary btn-lg">Shop Now</span></a>
-                                }
-                                
+                                    }
+
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
