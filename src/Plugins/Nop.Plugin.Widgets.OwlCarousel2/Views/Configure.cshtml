@@ -1,0 +1,195 @@
+﻿@model Nop.Plugin.Widgets.OwlCarousel2.Models.ConfigurationModel
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+<form asp-controller="WidgetsOwlCarousel2" asp-action="Configure" method="post">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="cards-group">
+                <div class="card card-default">
+                    <div class="card-header">
+                        @T("Plugins.Widgets.OwlCarousel2.Slide1")
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideLg1Id_OverrideForStore" asp-input="SlideLg1Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideLg1Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideLg1Id" />
+                                <span asp-validation-for="SlideLg1Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideSm1Id_OverrideForStore" asp-input="SlideSm1Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideSm1Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideSm1Id" />
+                                <span asp-validation-for="SlideSm1Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Title1_OverrideForStore" asp-input="Title1" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Title1" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Title1" />
+                                <span asp-validation-for="Title1"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Description1_OverrideForStore" asp-input="Description1" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Description1" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Description1" />
+                                <span asp-validation-for="Description1"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Link1_OverrideForStore" asp-input="Link1" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Link1" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Link1" />
+                                <span asp-validation-for="Link1"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-default">
+                    <div class="card-header">
+                        @T("Plugins.Widgets.OwlCarousel2.Slide2")
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideLg2Id_OverrideForStore" asp-input="SlideLg2Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideLg2Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideLg2Id" />
+                                <span asp-validation-for="SlideLg2Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideSm2Id_OverrideForStore" asp-input="SlideSm2Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideSm2Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideSm2Id" />
+                                <span asp-validation-for="SlideSm2Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Title2_OverrideForStore" asp-input="Title2" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Title2" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Title2" />
+                                <span asp-validation-for="Title2"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Description2_OverrideForStore" asp-input="Description2" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Description2" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Description2" />
+                                <span asp-validation-for="Description2"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Link2_OverrideForStore" asp-input="Link2" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Link2" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Link2" />
+                                <span asp-validation-for="Link2"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="card card-default">
+                    <div class="card-header">
+                        @T("Plugins.Widgets.OwlCarousel2.Slide3")
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideLg3Id_OverrideForStore" asp-input="SlideLg3Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideLg3Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideLg3Id" />
+                                <span asp-validation-for="SlideLg3Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="SlideSm3Id_OverrideForStore" asp-input="SlideSm3Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="SlideSm3Id" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SlideSm3Id" />
+                                <span asp-validation-for="SlideSm3Id"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Title3_OverrideForStore" asp-input="Title3" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Title3" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Title3" />
+                                <span asp-validation-for="Title3"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Description3_OverrideForStore" asp-input="Description3" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Description3" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-textarea asp-for="Description3" />
+                                <span asp-validation-for="Description3"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-override-store-checkbox asp-for="Link3_OverrideForStore" asp-input="Link3" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                                <nop-label asp-for="Link3" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Link3" />
+                                <span asp-validation-for="Link3"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-9 offset-md-3">
+                                <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</form>

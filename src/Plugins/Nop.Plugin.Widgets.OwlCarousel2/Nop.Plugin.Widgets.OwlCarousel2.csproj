@@ -23,6 +23,10 @@
 	  <Content Include="Views\**" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 	
+  <ItemGroup>
+    <None Remove="Views\Configure.cshtml" />
+  </ItemGroup>
+	
 
 	
   <!-- This target execute after "Build" target -->

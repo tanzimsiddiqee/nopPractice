@@ -27,7 +27,7 @@
                             <div class="block-slideshow__slide-content">
                                 @if (Model.Title1 != null)
                                 {
-                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title1)</div>
+                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title1)</div>
                                 }
                                 
                                 @if (Model.Description1 != null)
@@ -60,7 +60,7 @@
                             <div class="block-slideshow__slide-content">
                                 @if (Model.Title2 != null)
                                 {
-                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title2)</div>
+                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title2)</div>
                                 }
                                 
                                 @if (Model.Description2 != null)
@@ -93,7 +93,7 @@
                             <div class="block-slideshow__slide-content">
                                 @if (Model.Title3 != null)
                                 {
-                                     <div class="block-slideshow__slide-title">@Html.DisplayFor(model => model.Title3)</div>
+                                     <div class="block-slideshow__slide-title">@Html.Raw(Model.Title3)</div>
                                 }
                                 
                                 @if (Model.Description3 != null)

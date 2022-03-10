@@ -39,7 +39,7 @@ namespace Nop.Plugin.Widgets.OwlCarousel2.Components
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var store = await _storeContext.GetCurrentStoreAsync();
-            var nivoSliderSettings = await _settingService.LoadSettingAsync<OwlCarousel2Setting>(store.Id);
+            var nivoSliderSettings = await _settingService.LoadSettingAsync<OwlCarousel2Settings>(store.Id);
 
             var model = new PublicInfoViewModel
             {

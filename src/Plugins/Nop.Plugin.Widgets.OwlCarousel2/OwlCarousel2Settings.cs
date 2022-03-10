@@ -3,7 +3,7 @@
 
 namespace Nop.Plugin.Widgets.OwlCarousel2
 {
-    public class OwlCarousel2Setting : ISettings
+    public class OwlCarousel2Settings : ISettings
     {
         public int SlideLg1Id { get; set; }
 

@@ -60,42 +60,48 @@ namespace Nop.Plugin.Widgets.OwlCarousel2
             var sampleImagesPath = _fileProvider.MapPath("~/Plugins/Widgets.OwlCarousel2/Content/sample-images/");
 
             //settings
-            var settings = new OwlCarousel2Setting()
+            var settings = new OwlCarousel2Settings()
             {
                 SlideLg1Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-1-full.jpg")), MimeTypes.ImagePJpeg, "slide-1-full")).Id,
                 SlideSm1Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-1-mobile.jpg")), MimeTypes.ImagePJpeg, "slide-1-mobile")).Id,
-                Title1 = "",
-                Description1 = "",
+                Title1 = "Big choice of <br> Plumbing products",
+                Description1 = $"Lorem ipsum dolor sit amet," +
+                               $"consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis" +
+                               $"molestie.",
                 Link1 = _webHelper.GetStoreLocation(),
                 SlideLg2Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-2-full.jpg")), MimeTypes.ImagePJpeg, "slide-2-full")).Id,
                 SlideSm2Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-2-mobile.jpg")), MimeTypes.ImagePJpeg, "slide-2-mobile")).Id,
-                Title2 = "",
-                Description2 = "",
+                Title2 = "Screwdrivers<br>Professional Tools",
+                Description2 = $"Lorem ipsum dolor sit amet," +
+                               $"consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis" +
+                               $"molestie.",
                 Link2 = _webHelper.GetStoreLocation(),
                 SlideLg3Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-3-full.jpg")), MimeTypes.ImagePJpeg, "slide-3-full")).Id,
                 SlideSm3Id = (await _pictureService.InsertPictureAsync(await _fileProvider.ReadAllBytesAsync(_fileProvider.Combine(sampleImagesPath, "slide-3-mobile.jpg")), MimeTypes.ImagePJpeg, "slide-3-mobile")).Id,
-                Title3 = "",
-                Description3 = "",
+                Title3 = "One more<br>Unique header",
+                Description3 = $"Lorem ipsum dolor sit amet," +
+                               $"consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis" +
+                               $"molestie.",
                 Link3 = _webHelper.GetStoreLocation(),
             };
             await _settingService.SaveSettingAsync(settings);
 
-            //await _localizationService.AddOrUpdateLocaleResourceAsync(new Dictionary<string, string>
-            //{
-            //    ["Plugins.Widgets.NivoSlider.Picture1"] = "Picture 1",
-            //    ["Plugins.Widgets.NivoSlider.Picture2"] = "Picture 2",
-            //    ["Plugins.Widgets.NivoSlider.Picture3"] = "Picture 3",
-            //    ["Plugins.Widgets.NivoSlider.Picture4"] = "Picture 4",
-            //    ["Plugins.Widgets.NivoSlider.Picture5"] = "Picture 5",
-            //    ["Plugins.Widgets.NivoSlider.Picture"] = "Picture",
-            //    ["Plugins.Widgets.NivoSlider.Picture.Hint"] = "Upload picture.",
-            //    ["Plugins.Widgets.NivoSlider.Text"] = "Comment",
-            //    ["Plugins.Widgets.NivoSlider.Text.Hint"] = "Enter comment for picture. Leave empty if you don't want to display any text.",
-            //    ["Plugins.Widgets.NivoSlider.Link"] = "URL",
-            //    ["Plugins.Widgets.NivoSlider.Link.Hint"] = "Enter URL. Leave empty if you don't want this picture to be clickable.",
-            //    ["Plugins.Widgets.NivoSlider.AltText"] = "Image alternate text",
-            //    ["Plugins.Widgets.NivoSlider.AltText.Hint"] = "Enter alternate text that will be added to image."
-            //});
+            await _localizationService.AddOrUpdateLocaleResourceAsync(new Dictionary<string, string>
+            {
+                ["Plugins.Widgets.OwlCarousel2.Slide1"] = "Slide 1",
+                ["Plugins.Widgets.OwlCarousel2.Slide2"] = "Slide 2",
+                ["Plugins.Widgets.OwlCarousel2.Slide3"] = "Slide 3",
+                ["Plugins.Widgets.OwlCarousel2.SlideLg"] = "Large Slide",
+                ["Plugins.Widgets.OwlCarousel2.SlideLg.Hint"] = "Upload Slide for Desktop User.",
+                ["Plugins.Widgets.OwlCarousel2.SlideSm"] = "Small Slide",
+                ["Plugins.Widgets.OwlCarousel2.SlideSm.Hint"] = "Upload Slide for mobile User.",
+                ["Plugins.Widgets.OwlCarousel2.Title"] = "Title",
+                ["Plugins.Widgets.OwlCarousel2.Title.Hint"] = "Enter Title for slide. Leave empty if you don't want to display any text.",
+                ["Plugins.Widgets.OwlCarousel2.Description"] = "Description",
+                ["Plugins.Widgets.OwlCarousel2.Description.Hint"] = "Enter Description for slide. Leave empty if you don't want to display any text.",
+                ["Plugins.Widgets.OwlCarousel2.Link"] = "URL",
+                ["Plugins.Widgets.OwlCarousel2.Link.Hint"] = "Enter URL. Leave empty if you don't want this picture to be clickable."
+            });
 
             await base.InstallAsync();
         }
@@ -107,7 +113,7 @@ namespace Nop.Plugin.Widgets.OwlCarousel2
         public override async Task UninstallAsync()
         {
             ////settings
-            await _settingService.DeleteSettingAsync<OwlCarousel2Setting>();
+            await _settingService.DeleteSettingAsync<OwlCarousel2Settings>();
 
             ////locales
             await _localizationService.DeleteLocaleResourcesAsync("Plugins.Widgets.OwlCarousel2");
