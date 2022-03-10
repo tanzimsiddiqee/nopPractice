@@ -90,6 +90,10 @@
     {
       "SystemName": "Widgets.OwlCarousel2",
       "Version": "1.00"
+    },
+    {
+      "SystemName": "ExternalAuth.Google",
+      "Version": "1.00"
     }
   ],
   "PluginNamesToUninstall": [],
